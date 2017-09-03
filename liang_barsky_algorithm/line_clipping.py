@@ -9,10 +9,10 @@
 
 
 class Window:
-    def __init__(self):
-        self.point = []
-        self.height = 0
-        self.width = 0
+    def __init__(self, point=list(), width=0, height=0):
+        self.point = point
+        self.width = width
+        self.height = height
 
 
 def get_data():
@@ -36,7 +36,7 @@ def left_analysis(point_1, point_2):
     print(point_1, point_2)
 
 
-def line_clipper(points):
+def line_clipper(points, window):
     i = 0
     while i < len(points) - 1:
         left_analysis(points[i], points[i+1])
@@ -45,8 +45,12 @@ def line_clipper(points):
 
 def main():
     points = get_data()
-    window = input()
-    line_clipper(points)
+    print("===Enter Window data===")
+    w_point = input("Point (separate by space): ").split(" ")
+    width = int(input("Width: "))
+    height = int(input("Height: "))
+    w = Window(w_point, width, height)
+    line_clipper(points, w)
 
 
 if __name__ == '__main__':
