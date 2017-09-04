@@ -113,7 +113,7 @@ def right_analysis(line, w):
     if u < 0 or u > 1:
         return None
     y = line.get_y_i() + u*(line.get_y_f() - line.get_y_i())
-    clipping_point = Point(w.get_x_left(), y)
+    clipping_point = Point(w.get_x_right(), y)
     if not w.is_inside_window(clipping_point):
         return None
     return clipping_point
