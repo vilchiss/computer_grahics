@@ -94,7 +94,7 @@ def get_lines(points):
 
 
 def left_analysis(line, w):
-    if line.is_parallel_to_axis():
+    if line.is_vertical():
         return None
     u = (w.get_x_left() - line.get_x_i())/(line.get_x_f() - line.get_x_i())
     if u < 0 or u > 1:
@@ -107,7 +107,7 @@ def left_analysis(line, w):
 
 
 def right_analysis(line, w):
-    if line.is_parallel_to_axis():
+    if line.is_vertical():
         return None
     u = (w.get_x_right() - line.get_x_i())/(line.get_x_f() - line.get_x_i())
     if u < 0 or u > 1:
@@ -120,7 +120,7 @@ def right_analysis(line, w):
 
 
 def bottom_analysis(line, w):
-    if line.is_parallel_to_axis():
+    if line.is_horizontal():
         return None
     u = (w.get_y_bottom() - line.get_y_i())/(line.get_y_f() - line.get_y_i())
     if u < 0 or u > 1:
@@ -133,7 +133,7 @@ def bottom_analysis(line, w):
 
 
 def top_analysis(line, w):
-    if line.is_parallel_to_axis():
+    if line.is_horizontal():
         return None
     u = (w.get_y_top() - line.get_y_i())/(line.get_y_f() - line.get_y_i())
     if u < 0 or u > 1:
