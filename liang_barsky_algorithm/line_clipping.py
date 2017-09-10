@@ -1,25 +1,27 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 """
-	This program is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
 
-	This program is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
 
-	You should have received a copy of the GNU General Public License
-	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-	Realizado por:
-	@Barriga Martínez Diego Alberto
-	@Oropeza Vilchis Luis Alberto
+    Realizado por:
+    @Barriga Martínez Diego Alberto
+    @Oropeza Vilchis Luis Alberto
 
-	Versión de Python: 3.6
+    Versión de Python: 3.6
 """
+
+import sys
 
 
 class Point:
@@ -192,11 +194,10 @@ def store_information(clipping_point, side, line_id, file):
 
 def main():
     lines = get_lines(get_data())
-    print("===Enter Window data===")
-    w_point = list(map(int, input("Point (separate by space): ").split(" ")))
-    width = int(input("Width: "))
-    height = int(input("Height: "))
-    w = Window(Point(w_point[0], w_point[1]), width, height)
+    window_point = [int(sys.argv[1]), int(sys.argv[2])]
+    width = int(sys.argv[3])
+    height = int(sys.argv[4])
+    w = Window(Point(window_point[0], window_point[1]), width, height)
     line_clipper(lines, w)
 
 
