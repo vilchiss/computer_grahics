@@ -16,9 +16,9 @@
 
 	Realizado por:
 	@Barriga Martínez Diego Alberto
-	@Vilchis Oropeza Luis Alberto
+	@Oropeza Vilchis Luis Alberto
 
-	Versión de Python:s 3.6
+	Versión de Python: 3.6
 """
 
 
