@@ -27,12 +27,13 @@ Para ambos casos:
 
 * Los datos de entrada en el archivo tienen el siguiente formato
     
-    
     p1X p1Y
-    p2X p2Y
-      ...
-    pnX pnY
     
+    p2X p2Y
+    
+      ...
+      
+    pnX pnY
     
 donde cada par de valores en la misma fila representan un punto de la línea; cada línea debe estar
 especificada por dos puntos.
