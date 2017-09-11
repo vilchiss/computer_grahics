@@ -15,9 +15,9 @@ Forma de uso (C):
     $ gcc -o line_clipping line_clipping.c
     $ ./line_clipping fileInput fileOutput wx wy ancho alto
     
-donde:
-fileInput: archivo que contiene los datos de entrada
-fileOutput: archivo donde se guardarán los resultados
+donde:  
+* fileInput: archivo que contiene los datos de entrada
+* fileOutput: archivo donde se guardarán los resultados
 
 
 Para ambos casos:
