@@ -95,7 +95,7 @@ class Line:
 
 def get_data():
     points = list()
-    with open('input.txt', 'r') as file:
+    with open(sys.argv[1], 'r') as file:
         for line in file:
             data = list(map(int, line.rstrip("\n").split(" ")))
             points.append(Point(data[0], data[1]))
@@ -172,7 +172,7 @@ def liang_barsky(line, window):
 
 def line_clipper(lines, window):
     line_counter = 1
-    with open('output.txt', "w") as file:
+    with open(sys.argv[2], "w") as file:
         for l in lines:
             clipping_points = liang_barsky(l, window)
             store_information(clipping_points["left"], "Left", line_counter,file)
@@ -194,10 +194,7 @@ def store_information(clipping_point, side, line_id, file):
 
 def main():
     lines = get_lines(get_data())
-    window_point = [int(sys.argv[1]), int(sys.argv[2])]
-    width = int(sys.argv[3])
-    height = int(sys.argv[4])
-    w = Window(Point(window_point[0], window_point[1]), width, height)
+    w = Window(Point(int(sys.argv[3]), int(sys.argv[4])), int(sys.argv[5]), int(sys.argv[6]))
     line_clipper(lines, w)
 
 

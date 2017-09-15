@@ -5,10 +5,7 @@ Algoritmo implementado en Python y C.
 
 Forma de uso (Python):
 
-    $ python3 line_clipping.py wx wy ancho alto
-    
-Los datos de entrada se toman de un archivo con nombre "input.txt" y los resultados son
-almacenados en el archivo con nombre "output.txt".
+    $ python3 line_clipping.py fileInput fileOutput wx wy ancho alto
 
 Forma de uso (C):
 
@@ -32,5 +29,5 @@ Para ambos casos:
       ...  
     pnX pnY  
     
-donde cada par de valores en la misma fila representan un punto de la línea; cada línea debe estar
+donde cada par de valores, en la misma fila, representan un punto de la línea; cada línea debe estar
 especificada por dos puntos.
