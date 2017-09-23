@@ -25,7 +25,7 @@ Para ambos casos:
 * Los datos de entrada en el archivo tienen el siguiente formato
     
     p1X p1Y  
-    p2X p2Y
+    p2X p2Y  
       ...  
     piX piY  
     
