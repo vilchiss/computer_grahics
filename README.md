@@ -20,14 +20,14 @@ donde:
 Para ambos casos:
 * (wx, wy) representan el punto inicial de la ventana
 * ancho: tamaño del ancho de la ventana, a partir del punto
-* ancho: tamaño del largo de la ventana, a partir del punto
+* alto: tamaño de la altura de la ventana, a partir del punto
 
 * Los datos de entrada en el archivo tienen el siguiente formato
     
     p1X p1Y  
-    p2X p2Y  
+    p2X p2Y
       ...  
-    pnX pnY  
+    piX piY  
     
 donde cada par de valores, en la misma fila, representan un punto de la línea; cada línea debe estar
 especificada por dos puntos.
